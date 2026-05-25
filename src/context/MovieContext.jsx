@@ -16,8 +16,8 @@ export const MovieProvider = ({ children }) => {
   const [loadingSubscription, setLoadingSubscription] = useState(false);
   const [loadingFavorites, setLoadingFavorites] = useState(false);
 
-  const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:2025";
-
+  const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:2025";
+  console.log(BASE_URL,"baseurl")
   // Check if token exists before making API requests
   const hasToken = () => !!localStorage.getItem("token");
 
